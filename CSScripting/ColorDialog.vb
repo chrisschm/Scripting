@@ -63,6 +63,7 @@ Public Class ColorDialog
         ''' </summary>
         No = 7
     End Enum
+
 #End Region
 
 #Region "Methoden"
@@ -153,18 +154,87 @@ Public Class ColorDialog
     End Property
 
     ''' <summary>
-    ''' Ruft die von den Benutzern ausgewählte Farbe ab oder legt diese fest.
+    ''' Ruft den Wert der Alphakomponente der ausgewählten Farbe ab.
     ''' </summary>
     ''' <returns>
-    ''' Die von den Benutzern ausgewählte Farbe. Wenn keine Farbe ausgewählt ist, ist Schwarz der Standardwert.
+    ''' Der Wert der Alphakomponente der ausgewählten Farbe.
     ''' </returns>
-    Public Property Color() As Drawing.Color
+    Public ReadOnly Property ColorAlpha() As Byte
         Get
-            Return CD.Color
+            Return CD.Color.A
         End Get
-        Set(value As Drawing.Color)
-            CD.Color = value
-        End Set
+    End Property
+
+    ''' <summary>
+    ''' Ruft den 32-Bit-ARGB-Wert der ausgewählten Farbe ab.
+    ''' </summary>
+    ''' <returns>
+    ''' Die 32-Bit-ARGB-Wert der ausgewählten Farbe.
+    ''' </returns>
+    Public ReadOnly Property ColorArgb() As Integer
+        Get
+            Return CD.Color.ToArgb()
+        End Get
+    End Property
+
+    ''' <summary>
+    ''' Ruft den Wert des Blauanteils der ausgewählten Farbe ab.
+    ''' </summary>
+    ''' <returns>
+    ''' Der Wert des Blauanteils der ausgewählten Farbe.
+    ''' </returns>
+    Public ReadOnly Property ColorBlue() As Byte
+        Get
+            Return CD.Color.B
+        End Get
+    End Property
+
+    ''' <summary>
+    ''' Ruft den Wert des Grünanteils der ausgewählten Farbe ab.
+    ''' </summary>
+    ''' <returns>
+    ''' Der Wert des Grünanteils der ausgewählten Farbe.
+    ''' </returns>
+    Public ReadOnly Property ColorGreen() As Byte
+        Get
+            Return CD.Color.G
+        End Get
+    End Property
+
+    ''' <summary>
+    ''' Ruft die hexadezimale Darstellung der ausgewählten Farbe ab.
+    ''' </summary>
+    ''' <returns>
+    ''' Die hexadezimale Darstellung der ausgewählten Farbe.
+    ''' </returns>
+    Public ReadOnly Property ColorHTML() As String
+        Get
+            Return "#" & Hex(CD.Color.R) & Hex(CD.Color.G) & Hex(CD.Color.B)
+        End Get
+    End Property
+
+    ''' <summary>
+    ''' Ruft den Namen der ausgewählten Farbe ab.
+    ''' </summary>
+    ''' <returns>
+    ''' Der Name der ausgewählten Farbe.
+    ''' </returns>
+    Public ReadOnly Property ColorName() As String
+        Get
+            Return CD.Color.Name
+        End Get
+    End Property
+
+    ''' <summary>
+    ''' Ruft den Wert des Rotanteils der ausgewählten Farbe ab.
+    ''' </summary>
+    ''' <returns>
+    ''' Der Wert des Rotanteils der ausgewählten Farbe.
+    ''' </returns>
+    Public ReadOnly Property ColorRed() As Byte
+        Get
+            Return CD.Color.R
+        End Get
     End Property
 
     ''' <summary>
