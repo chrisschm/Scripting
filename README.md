@@ -1,7 +1,14 @@
 # Scripting
 COM Klassen für Scripting (VBScript CreateObject()) erstellen
 
-ColorDialog Klasse</br>
-Network Klasse</br>
-OpenFileDialog Klasse</br>
-SaveFileDialog Klasse
+**ColorDialog Klasse**
+Dialog zur Auswahl von Farben
+
+**Network Klasse**
+Downloads und Pings
+
+**OpenFileDialog Klasse**
+Datei öffnen Dialog
+
+**SaveFileDialog Klasse**
+Datei speichern Dialog
