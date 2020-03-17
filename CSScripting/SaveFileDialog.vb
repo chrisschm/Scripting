@@ -97,6 +97,23 @@ Public Class SaveFileDialog
     Public Sub Reset()
 
         SFD.Reset()
+        'Standardwerte setzen, falls das Windows.Forms.OpenFileDialog sein Verhalten ändert
+        SFD.AddExtension = True
+        SFD.AutoUpgradeEnabled = True
+        SFD.CheckFileExists = False
+        SFD.CheckPathExists = True
+        SFD.CreatePrompt = False
+        SFD.DefaultExt = ""
+        SFD.DereferenceLinks = True
+        SFD.FileName = ""
+        SFD.FilterIndex = 1
+        SFD.InitialDirectory = ""
+        SFD.OverwritePrompt = True
+        SFD.RestoreDirectory = False
+        SFD.ShowHelp = False
+        SFD.SupportMultiDottedExtensions = False
+        SFD.Title = ""
+        SFD.ValidateNames = True
 
     End Sub
 

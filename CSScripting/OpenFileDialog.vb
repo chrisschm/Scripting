@@ -98,6 +98,24 @@ Public Class OpenFileDialog
     Public Sub Reset()
 
         OFD.Reset()
+        'Standardwerte setzen, falls das Windows.Forms.OpenFileDialog sein Verhalten ändert
+        OFD.AddExtension = True
+        OFD.AutoUpgradeEnabled = True
+        OFD.CheckFileExists = False
+        OFD.CheckPathExists = True
+        OFD.DefaultExt = ""
+        OFD.DereferenceLinks = True
+        OFD.FileName = ""
+        OFD.FilterIndex = 1
+        OFD.InitialDirectory = ""
+        OFD.Multiselect = False
+        OFD.ReadOnlyChecked = False
+        OFD.RestoreDirectory = False
+        OFD.ShowHelp = False
+        OFD.ShowReadOnly = False
+        OFD.SupportMultiDottedExtensions = False
+        OFD.Title = ""
+        OFD.ValidateNames = True
 
     End Sub
 
