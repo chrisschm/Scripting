@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorDialog.vb" />
+    <Compile Include="FolderBrowserDialog.vb" />
     <Compile Include="Network.vb" />
     <Compile Include="OpenFileDialog.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
