@@ -22,8 +22,10 @@ Als Beispiel nehme ich die FolderBrowserDialog Klasse. Die anderen Dialog sind e
 Beschreibung jeder Methode, Konstante, Variable und Eigenschaft sind im Code kommentiert.
 
 ```vbs
-Dim FBDlg As New FolderBrowserDialog
+Dim FBDlg As Object
 dim sPath As String
+
+Set FBDlg = CreateObject("FolderBrowserDialog")
 
 FBDlg.Description = "Bitte das Verzeichnis wählen."
 FBDlg.RootFolder = 0
